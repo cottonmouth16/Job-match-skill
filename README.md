@@ -20,6 +20,14 @@ Every run is logged to `runs/<date>_<Company>_<Role>/run_log.md` and appended to
 
 The **Summary/Professional Summary section of your resume is locked** — no stage of the pipeline may rephrase, reorder, or touch it, even if it contains keywords the JD is looking for. Nothing is ever fabricated. If a keyword can't be truthfully claimed, it goes into the gap report instead of the resume.
 
+## How the scoring works (and what it isn't)
+
+This is not a reverse-engineered Workday/Taleo/iCIMS algorithm — no external tool can replicate a specific vendor's internal, proprietary scoring, because that logic isn't public and varies by company and configuration.
+
+What it does instead: approximate the same *categories* of things ATS platforms parse and recruiters filter on — keyword/skill match, standard section headers, date formatting, contact-field detection, structural red flags. That's a directional, ATS-friendliness estimate, not a readout of any specific system's score.
+
+The tradeoff is transparency. The keyword dictionaries in `scripts/local_scorer.py` are plain, editable Python — you can see exactly why a score landed where it did and tune it, unlike black-box paid scorers. Treat the score as a proxy for "would a keyword/structure-based filter flag this," not a guarantee of what any one employer's system will output.
+
 ## Repo contents
 
 ```
