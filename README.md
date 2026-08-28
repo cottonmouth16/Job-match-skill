@@ -55,6 +55,10 @@ job-match-skill/
 
 You can also just paste the contents of `SKILL.md` (and reference it pulls in `references/*.md` as needed) directly into a conversation if your client doesn't support skill folders — Claude will follow the same pipeline.
 
+**Works on the Free plan too.** 
+
+The only prerequisite: enable **Code execution and file creation** under Settings → Capabilities in claude.ai before uploading the skill folder. Without it, file-based steps (reading your resume, writing the packaged `.docx` outputs) won't run.
+
 ## Usage
 
 Once installed, just talk to Claude naturally:
